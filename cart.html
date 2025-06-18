@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex">
+        <meta name="description" content="このサイトはテストサイトです">
+        <title>[Test_page]カート｜米蔵むすび 公式オンラインショップ</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <link rel="icon" href="images/rogo_icon.png">
+        <link rel="stylesheet" type="text/css" href="css/top.css">
+        <script src="js/cart.js"></script>
+        <script src="js/login_status.js"></script>
+        <script src="js/cart_checkout.js"></script>
+    </head>
+</html>
+<body>
+    <div id="header">
+        <div class="header_contents">
+            <div class="header_contents_FAQ">
+                <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="2" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"
+                >
+                <!-- 吹き出しの本体 -->
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                
+                <!-- クエスチョンマーク（位置を調整） -->
+                <!-- 上半分（カーブ部分） -->
+                <path d="M9.09 8a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <!-- 下の点 -->
+                <line x1="12" y1="15" x2="12.01" y2="15"></line>
+                </svg>
+                <p class="header_contents_FAQ_icon">
+                    FAQ
+                </p>
+            </div>
+            <div class="header_contents_logo">
+                <a href="toppage.html">
+                    <h1>
+                        米蔵 むすび
+                    </h1>
+                </a>
+            </div>
+            <div class="header_contents_login_n_cart">
+                <div class="header_contents_login_n_cart_login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <p>
+                        ログイン
+                    </p>
+                </div>
+                <a href="cart.html" class="header_contents_login_n_cart_cart">
+                    <div class="cart-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.16"/></svg>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </div>
+                    <p>
+                        カート
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <h1 class="page-title">ショッピングカート</h1>
+    <div id="cart-layout">
+        <div class="cart-items">
+            <div class="cart-header">
+                <div class="header-product">商品</div>
+                <div class="header-price">価格</div>
+                <div class="header-quantity">数量</div>
+                <div class="header-total">合計</div>
+            </div>
+
+            <div id="cart-item-container"></div>
+
+            <div id="empty-cart-message" class="hidden">
+                <p>カートに商品がありません</p>
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <h2>ご注文概要</h2>
+            <div class="summary-row">
+                <span>商品小計</span>
+                <span id="summary-subtotal">¥0</span>
+            </div>
+            <div class="summary-row">
+                <span>送料</span>
+                <span id="summary-shipping">¥550</span>
+            </div>
+            <div class="summary-row">
+                <span>ご請求額</span>
+                <span id="summary-total">¥550</span>
+            </div>
+            <button class="btn-login">決済画面へ進む</button>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer_container">
+            <div class="footer_contents">
+                <div class="footer_contents_1">
+                    <h3 class="footer_item_title">店舗一覧</h3>
+                    <ul>
+                        <li>
+                            <a href="#">エリアから探す</a>
+                        </li>
+                        <li>
+                            <a href="#">サービスから探す</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_contents_2">
+                    <h3 class="footer_item_title">米蔵 むすびについて</h3>
+                    <ul>
+                        <li>
+                            <a href="#">歴史</a>
+                        </li>
+                        <li>
+                            <a href="#">こだわり</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_contents_3">
+                    <h3 class="footer_item_title">商品一覧</h3>
+                    <ul>
+                        <li>
+                            <a href="#">宅配限定</a>
+                        </li>
+                        <li>
+                            <a href="#">イベント</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_contents_4">
+                    <h3 class="footer_item_title">ご利用ガイド</h3>
+                    <ul>
+                        <li>
+                            <a href="#">お支払方法について</a>
+                        </li>
+                        <li>
+                            <a href="#">返品について</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <p>© 2099 Komekura Musubi. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
